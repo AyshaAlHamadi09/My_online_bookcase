@@ -1,0 +1,96 @@
+body {
+  background: #F0E8E8; /* Soft pastel background color */
+  color: #333; /* Dark gray text color */
+  font-family: Arial, sans-serif; /* Use a sans-serif font for better readability */
+}
+
+.list-books-title {
+  padding: 10px 50px;
+  background: #C9A8A8; /* Light pastel background color */
+  color: #fff; /* White text color */
+  text-align: center;
+  font-size: 16pt;
+}
+
+.book-grid {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.book-grid li {
+  padding: 10px 15px;
+  text-align: left;
+  background: #F0E8E8; /* Soft pastel background color for book items */
+  border-radius: 5px; /* Add rounded corners for a softer look */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+.book {
+  width: 140px;
+}
+
+.book-title,
+.book-author {
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.book-delete {
+  color: red;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.nav_bar,
+.nav_bar a {
+  color: #333; /* Dark gray text color */
+  font-size: 10pt;
+}
+
+.add-form {
+  display: flex;
+  justify-content: center;
+}
+
+.book-title {
+  margin-top: 10px;
+}
+
+.book-author {
+  color: #666; /* Lighter gray text color */
+}
+
+.book-poster {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.15); /* Softer box shadow */
+  width: 128px;
+  height: 193px;
+}
+
+.search_form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search_text_button {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 2%;
+}
+
+#search {
+  width: 300px;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 5px;
+}

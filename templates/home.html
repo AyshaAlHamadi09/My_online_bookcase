@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+  <div class="list-books-title">
+    <h1>Aysha's Library</h1>
+      <div class="nav_bar">
+          <div class="search_form">
+              <div>
+                  <a href="/books">Add Book</a> |
+                  <a href="/authors">Add Author</a> |
+                  <a href="/">View All Books</a>
+              </div>
+              <form action="/search_book" method="POST">
+                  <div class="search_text_button">
+                      <input type="text" id="search" name="search" placeholder="search your favourite book">
+                      <input type="submit" value="Search">
+                  </div>
+          </div>
+      </div>
+  </div>
+  <div>
+      <div class="book-delete">
+          {% if message %}
+          <br>{{message}}
+          {% endif %}
+      </div>
+      <ol class="book-grid">
+          {% if books %}
+              {% for book in books %}
+                  <li>
+                      <div class="book">
+                            <img class="book-poster" src="{{book.cover_image_url}}"
+                                 alt="{{ book.title }} book cover image not available">
+                            <div class="book-title">{{ book.title }}</div>
+                            <div class="book-author">{{book.author.name}}</div>
+                            <div class="book-author"><a href="/book/{{book.id}}/delete">Delete</a></div>
+                      </div>
+                  </li>
+              {% endfor %}
+          {% else %}
+            {{ error_message }}
+          {% endif %}
+      </ol>
+  </div>
+
+  </body>
+</html>
